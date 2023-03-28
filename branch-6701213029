@@ -1,0 +1,31 @@
+<?php
+//mengambil dan menyimpan data dalam post
+if(isset($_POST['operasi'])) {
+  $angka1 = $_POST['angka1'];
+  $angka2 = $_POST['angka2'];
+  $operator = $_POST['operator'];
+}
+
+// menggunakan switch case untuk mengecek operator aritmatika yang digunakan
+switch ($operator) {
+  case '+': // jika operator aritmatika adalah +
+    $hasil = $angka1 + $angka2; // lakukan operasi penjumlahan
+    echo "Hasil penjumlahan dari $angka1 + $angka2 = $hasil"; // tampilkan hasil
+    break; // hentikan switch case
+  case '-': // jika operator aritmatika adalah -
+    $hasil = $angka1 - $angka2; // lakukan operasi pengurangan
+    echo "Hasil pengurangan dari $angka1 - $angka2 = $hasil"; // tampilkan hasil
+    break; // hentikan switch case
+  case '*': // jika operator aritmatika adalah *
+    $hasil = $angka1 * $angka2; // lakukan operasi perkalian
+    echo "Hasil perkalian dari $angka1 * $angka2 = $hasil"; // tampilkan hasil
+    break; // hentikan switch case
+  case '/': // jika operator aritmatika adalah /
+    $hasil = $angka1 / $angka2; // lakukan operasi pembagian
+    echo "Hasil pembagian dari $angka1 / $angka2 = $hasil"; // tampilkan hasil
+    break; // hentikan switch case
+  default:
+    echo "Operator aritmatika tidak dikenali"; // tampilkan pesan kesalahan
+    break; // hentikan switch case
+}
+?>
